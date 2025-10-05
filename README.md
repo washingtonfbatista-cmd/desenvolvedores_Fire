@@ -100,7 +100,7 @@
 
     <div class="container">
         <h1>Bobó de camarão</h1>
-        <img src="frango.png" alt="Bobó de camarão" width="100" height="100" class="product-image">
+        <img src="camarão.png" alt="camarão" width="100" height="100" class="product-image">
         <p class="price">R$ 30</p>
 
         <div class="quantity-selector">
