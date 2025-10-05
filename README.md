@@ -117,7 +117,11 @@
 
         <footer>
             <p>Clique em "Comprar Agora" para fazer seu pedido pelo WhatsApp.</p>
-            <p>Local para retirada: Braseiro Carnes e Frios!!.</p>
+            <p>Local para retirada: 
+                <a href="https://maps.app.goo.gl/GxwovGaZVTpDw1XW6?g_st=ac" target="_blank" style="color: #1a73e8; font-weight: bold;">
+                    Braseiro Carnes e Frios!!
+                </a>
+            </p>
         </footer>
     </div>
 
@@ -125,13 +129,11 @@
         // Função JavaScript para enviar o pedido
         function enviarPedido() {
             // *CERTIFIQUE-SE DE INCLUIR O CÓDIGO DO PAÍS (55 para Brasil) E O DDD!*
-            // Exemplo: 55 (código do Brasil) + 63 (DDD) + 992028047 (número) -> 5563992028047
             const numeroWhatsApp = "556392240626"; // Número no formato internacional (país + DDD + número)
             const precoUnitario = 30.00; // Preço fixo do produto
 
             const quantidade = parseInt(document.getElementById("quantidade").value, 10);
             
-            // Verifica se a quantidade é um número válido e maior que 0
             if (isNaN(quantidade) || quantidade < 1) {
                 alert("Por favor, insira uma quantidade válida (mínimo 1).");
                 return;
@@ -142,8 +144,7 @@
 
             // Mensagem que será enviada
             const mensagem = `Olá! Gostaria de fazer um novo pedido:\n\n*Produto:* Bobó de camarão\n*Quantidade:* ${quantidade}\n*Valor Total:* R$ ${valorTotal.toFixed(2).replace('.', ',')}${detalhesEntrega}`;
-            // toFixed(2) para 2 casas decimais e replace para trocar ponto por vírgula no Brasil
-
+            
             // Cria o link para o WhatsApp
             const linkWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensagem)}`;
 
